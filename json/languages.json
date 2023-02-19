@@ -1,0 +1,27 @@
+{
+    "Python": {
+        "YOE": 3,
+        "Description": "Long years ago I made a tryst with destiny, I wanted, nay, NEEDED to make a hit game... I chose Python because it's easy and I'm lazy. Game-wize, I've never really made anything that could be classified as one, but I have learnt a lot of other things instead. Graphics with tKinter, database stuff with MySQL, websites with Flask, web-scraping shenanigans with Selenium and a lot more.",
+        "Scale": 8
+    },
+    "JavaScript": {
+        "YOE": 2,
+        "Description": "JavaScript has allowed me to a lot of things that I otherwise would have been too lazy to do. I mean, it gives you your own GUI!! I've dipped my toes in frameworks like ReactJS, sever-side stuff with ExpressJS, graphic-awesomeness with ThreeJS and database madness with Firebase & Redis. I'm not as into the language as I am with Python, but I am familiar with waaaay more tools & libraries.",
+        "Scale": 7
+    },
+    "Java": {
+        "YOE": 2,
+        "Description": "Java's pretty cool. It's never been my go to language, but I'm quite comfortable when writing in it. The syntax, although excessive, is easy to understand. It has also really helped me in getting comfortable with classes which, prior to learning Java, were alien and a constant source of worry for me. I've occasionaly dabbled with Google's Android Studio, but that's as far as I've gone with external tools.",
+        "Scale": 6
+    },
+    "C#": {
+        "YOE": 2,
+        "Description": "C# started out as a language that I'd initally learnt to use the Unity Game Engine and is still used as a language to make small games in. But there's something about the language  that just makes me happy when writing in it. Something about the elegent syntax which makes the experience a pleasure. I'd say I know C# as well as I do Java, but given how much more the language has to offer, i'd have to put myself lower on the scale.",
+        "Scale": 5
+    },
+    "C": {
+        "YOE": 1,
+        "Description": "I remember watching a Fireship video one day on the C Programming Language. He mentioned how C is actually very simple with it's small amount of keywords. This caught my interest as I had previously only used C++ which had a bunch of keywords and was a constant source of headache for me. Since then, I've used C in a lot more of my projects and have to say, it's honestly quite fun! Well, until I inevitably run into a Segmentation Fault anyway.",
+        "Scale": 4
+    }
+}

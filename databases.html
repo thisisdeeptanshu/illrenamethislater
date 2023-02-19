@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="style.css">
+<style>
+    body {
+        background-color: #1a1a1a;
+    }
+    h1 {
+        height: 10%;
+        font-size: 5em;
+    }
+    .left {
+        animation: slide-left ease-in-out infinite;
+    }
+    .right {
+        animation: slide-right ease-in-out infinite;
+    }
+    div {
+        text-align: left;
+    }
+
+    h1, h1:hover {
+        color: #333333;
+    }
+
+    .button, .button:hover {
+        color: white;
+        display: inline;
+    }
+
+    @keyframes slide-left {
+        0%, 100% {
+            transform: translate(10%);
+        }
+        50% {
+            transform: translate(-101%);
+        }
+    }
+    @keyframes slide-right {
+        0%, 100% {
+            transform: translate(-101%);
+        }
+        50% {
+            transform: translate(10%);
+        }
+    }
+</style>
+<div id="container">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+<div class="center">
+    <h1 class="button" onmouseenter="show('Redis', 'yes')" onmouseleave="show('Redis', 'no')">MySQL</h1>
+    <h1 class="button" onmouseenter="show('Firebase', 'yes')" onmouseleave="show('Firebase', 'no')">Firebase</h1>
+    <h1 class="button" onmouseenter="show('MySQL', 'yes')" onmouseleave="show('MySQL', 'no')">Redis</h1>
+</div>
+<script>
+    function show(thing, yn) {
+        console.log("wow");
+        let choice = colours[randomIntFromInterval(0, 2)];
+        Array.from(document.getElementsByClassName(thing)).forEach((e) => {
+            e.style.color = yn == 'yes' ? choice : "#333333";
+            e.style.zIndex = yn == 'yes' ? "-1" : "-2";
+        });
+    }
+    // https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
+    function randomIntFromInterval(min, max) { // min and max included 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    let elements = document.getElementsByClassName("line");
+    let j = 0;
+    let rands = [];
+    let rand2 = [];
+    let colours = ["#35D2FD", "#787EE3", "#BEBAFC"];
+    for (let i = 0; i < 10; i++) {
+        rands.push(randomIntFromInterval(1, 2));
+        rand2.push(randomIntFromInterval(30, 60));
+    }
+    Array.from(elements).forEach((element) => {
+        for (let i = 0; i < 10; i++) {
+            let a = document.createElement("h1");
+            a.innerText = ["MySQL", "Redis", "Firebase"][randomIntFromInterval(0, 2)];
+            a.setAttribute("class", (rands[i] == 1 ? "right" : "left") + " " + a.innerText);
+            a.style.pointerEvents = "none";
+            a.style.position = "absolute";
+            a.style.animationDuration = rand2[i] + "s";
+            let w = document.body.clientWidth;
+            let size = 20;
+            if (w < 2880) size = 10;
+            if (w < 2100) size = 15;
+            if (w < 1699) size = 20;
+            if (w < 1366) size = 25;
+            a.style.top = i * 10 + "%";
+            a.style.left = j * size + "%";
+            a.style.zIndex = "-2";
+            element.appendChild(a);
+        }
+        j++;
+    });
+</script>
